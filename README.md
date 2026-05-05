@@ -68,7 +68,7 @@ Open and run `EDA.ipynb` first, then `first_model_classification.ipynb`, then `s
 
 ## Presentation
 
-The non-technical stakeholder presentation is available here: [presentation.pdf](presentation.pdf)
+The non-technical stakeholder presentation is available here: [presentation.pdf](Tanzania Water Wells.pdf)
 
 ---
 
