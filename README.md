@@ -1,6 +1,6 @@
 # Predicting Water Well Functionality in Tanzania
 
-This project builds a multi-class classification model to predict the operational status of water wells across Tanzania — functional, functional needs repair, or non functional — using data from the Tanzanian Ministry of Water via DrivenData's [Pump It Up](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/) competition.
+This project builds a multi-class classification model to predict the operational status of water wells across Tanzania with classes,  functional, functional needs repair, or non functional, using data from the Tanzanian Ministry of Water via DrivenData's [Pump It Up](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/) competition.
 
 The goal is to help the Ministry and NGO partners prioritize maintenance resources by identifying which wells are likely broken or at risk, shifting from reactive to proactive repair scheduling. Models explored include Logistic Regression, Decision Tree, and a tuned Random Forest, evaluated using macro recall to minimize the number of broken wells that go undetected.
 
@@ -19,9 +19,8 @@ The goal is to help the Ministry and NGO partners prioritize maintenance resourc
 │       ├── y_train.csv
 │       ├── y_val.csv
 │       └── y_test.csv
-├── 01_EDA.ipynb                      # Business understanding, EDA, preprocessing, data export
-├── 02_FIRST_MODEL_CLASSIFICATION.ipynb   # Logistic Regression & Decision Tree
-├── 03_SECOND_MODEL_CLASSIFICATION.ipynb  # Random Forest, tuning, final evaluation
+├── EDA.ipynb                      # Business understanding, EDA, preprocessing, data export
+├── FIRST_MODEL_CLASSIFICATION.ipynb   # Logistic Regression & Decision Tree
 ├── presentation.pdf                  # Non-technical stakeholder presentation
 └── README.md
 ```
@@ -34,7 +33,6 @@ The goal is to help the Ministry and NGO partners prioritize maintenance resourc
 |---|---|
 | `EDA.ipynb` | Business understanding, exploratory data analysis, feature selection, train/val/test split, and preprocessing pipeline |
 | `first_model_classification.ipynb` | Baseline Dummy Classifier, Logistic Regression, and Decision Tree with depth tuning and feature importances |
-| `second_model_classification.ipynb` | Random Forest (default and tuned via GridSearchCV), final model selection, and holdout test evaluation |
 
 **Run the notebooks in order.** `EDA.ipynb` generates the processed data files that notebooks first and second depend on.
 
@@ -81,12 +79,10 @@ Open and run `EDA.ipynb` first, then `first_model_classification.ipynb`, then `s
 
 | Model | Validation Accuracy | Validation Macro Recall |
 |---|---|---|
-| Dummy Classifier (baseline) | ~0.54 | ~0.33 |
-| Logistic Regression | — | — |
-| Decision Tree | — | — |
-| Tuned Random Forest (final) | — | — |
+| Dummy Classifier (baseline) | 0.5431 | 0.3333 |
+| Logistic Regression | 0.6481 | 0.4510 |
+| Decision Tree | 0.7172 | 0.5026 |
 
-*Fill in your results after running the notebooks.*
 
 ---
 
